@@ -7,7 +7,7 @@ import com.danga.MemCached.SockIOPool;
 
 public class MemcacheTool {
 	
-	private static MemCachedClient client;
+	private static MemCachedClient client=getClient();
 	 
 	public static MemCachedClient getClient(){
 		if(client==null){
