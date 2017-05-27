@@ -29,10 +29,13 @@ public class AnotherServer extends HttpServlet {
 		// TODO Auto-generated method stub
 		String token = request.getParameter("token");
 		String username = MemcacheTool.get(token);
+		MemcacheTool.del(token);
 		if(username!=null){
 			response.getWriter().append("i got usernmae is :"+username);
+		}else{
+			response.getWriter().append("Served at: ").append(request.getContextPath());
 		}
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**

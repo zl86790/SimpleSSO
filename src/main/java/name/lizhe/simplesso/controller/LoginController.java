@@ -38,7 +38,7 @@ public class LoginController extends HttpServlet {
 			String uuid = AuthenticationTool.getUUID();
 			MemcacheTool.set(uuid, username, new Date(1000*60));
 			String url = AuthenticationTool.getAuthenURL(targetServerUrl,uuid);
-			response.getWriter().append("successed: ").append("<a href='AuthenticationTool.getAuthenURL(targetServerUrl,uuid)'>"+url+"</a>");
+			response.getWriter().append("successed: ").append(url);
 		}else{
 			response.getWriter().append("Served at: ").append(request.getContextPath());
 		}

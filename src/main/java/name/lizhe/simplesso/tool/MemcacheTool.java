@@ -39,5 +39,9 @@ public class MemcacheTool {
 		return (String)client.get(key);
 	}
 	
+	public static void del(String key){
+		client.delete(key);
+	}
+	
 
 }
