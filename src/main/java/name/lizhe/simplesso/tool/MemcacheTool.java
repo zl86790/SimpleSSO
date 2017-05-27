@@ -36,7 +36,7 @@ public class MemcacheTool {
 	}
 	
 	public static String get(String key){
-		return (String)client.get("test1");
+		return (String)client.get(key);
 	}
 	
 
